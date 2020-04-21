@@ -5,6 +5,7 @@
 	'version': '11.0',
 	'autor': 'Vauxoo',
 	'data': [
+		'views/layout.xml',
 	],
 	'category': 'Theme/Creative',
 	'dependes': [
