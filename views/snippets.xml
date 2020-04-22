@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Son pedasos de elementos constructivos en los que hacemos drag/drop
+en la interfaz del editor we 
+los snippets van en el archivo snippets.xml
+-->
+<odoo>
+	<template id="snippet_testimonial" name="Testimonial Snippet">
+		<!-- El primer elemento a tener  es esta seccion con la clase = id -->
+		<section class="snippet_testimonial">
+			<!-- El siguiente es un div con la clase container -->
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-md-4">
+						<!-- el src de la imagen se puede cargar con la ruta /theme_tutorial/.. pero la imagen siempre se descargaria con las medidas originales de la imagen-->
+						<!-- 
+							EN lugar de eso usaremos un controler(/website/main/:content_image) para los atachment para que la imagen se redimencione 
+
+					        '/website/image/<xmlid>',
+					        '/website/image/<xmlid>/<int:width>x<int:height>'
+
+					        Para saber el xmlID, te vas a settings/database structure/attachments/
+					        Menu bug/ view Metadata
+
+						-->
+						<img alt="Algo" class="img-circle" src="/website/image/theme_tutorial.client/250x250"/>
+						<h3>CLiente Name</h3>
+						<p>Lorem ipsum</p>
+					</div>
+					<div class="col-md-4">
+						<img alt="Algo" class="img-circle" src="/website/image/theme_tutorial.client/250x250"/>
+						<h3>CLiente Name</h3>
+						<p>Lorem ipsum</p>
+					</div>
+					<div class="col-md-4">
+						<img alt="Algo" class="img-circle" src="/website/image/theme_tutorial.client/250x250"/>
+						<h3>CLiente Name</h3>
+						<p>Lorem ipsum</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<!-- El template es el pedaso de codigo HTML que se insertara, falta la miniatura -->
+	<!-- Se debe de heredar de website.snippets -->
+	<!-- debe de ir primero el snippert antes de su miniatura -->
+	<template id="place_into_bar" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+			<!-- Aqui si se pone la ruta completa -->
+			<t t-snippet="theme_tutorial.snippet_testimonial" t-thumbnail="/theme_tutorial/static/src/img/testimonial.jpg"/>
+		</xpath>
+	</template>
+</odoo>

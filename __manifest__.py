@@ -6,7 +6,10 @@
 	'version': '11.0',
 	'autor': 'Vauxoo',
 	'data': [
+		#el assets siemplre van primero
 		'views/assets.xml',
+		'views/image_gallery.xml',
+		'views/snippets.xml',
 		'views/layout.xml',
 		'views/pages.xml',
 	],
