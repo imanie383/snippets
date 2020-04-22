@@ -6,9 +6,10 @@
 	'autor': 'Vauxoo',
 	'data': [
 		'views/layout.xml',
+		'views/pages.xml',
 	],
 	'category': 'Theme/Creative',
-	'dependes': [
+	'depends': [
 		'website',
 	],
 }

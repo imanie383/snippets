@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Como hacer una pagina estatica en un solo registro -->
+<!-- Este record crea un registro en la tabla website_page -->
+<!-- Poner paginas estaricas esta es la manera de ahacerlo -->
+
+<odoo>
+	<record id="services_page" model="website.page">
+		<!-- Nombre del record -->
+		<field name="name">Services Pages</field>
+		<!-- Campo de la tabla, eval = Codigo python -->
+		<field name="website_published" eval="True"/>
+		<field name="url">/services</field>
+		<field name="type">qweb</field>
+		<field name="key">theme_tutorial.services_page</field>
+		<field name="arch" type="xml">
+			<t t-name="theme_tutorial.services_page_template">
+				<t t-call="website.layout">
+					<div class="wrap">
+						<div class="container">
+							<h1>Our Services</h1>
+							<ul>
+								<li>1</li>
+								<li>2</li>
+								<li>3</li>
+							</ul>
+						</div>
+						<!-- Para que al momento de editar se puedan agregar snipets -->
+						<div class="oe_structure">
+							
+						</div>
+					</div>
+				</t>
+			</t>
+		</field>
+	</record>
+
+	<!-- Segunda manera record y template por separado -->
+	<template id="services_page_template_final">
+		<t t-call="website.layout">
+			<div class="wrap">
+				<div class="container">
+					<h1>Our Services</h1>
+					<ul>
+						<li>1</li>
+						<li>2</li>
+						<li>3</li>
+					</ul>
+				</div>
+				<!-- Para que al momento de editar se puedan agregar snipets -->
+				<div class="oe_structure">
+					
+				</div>
+			</div>
+		</t>
+	</template>
+
+	<record id="services_page_final" model="website.page">
+		<field name="name">Services Pages Final</field>
+		<field name="website_published" eval="True"/>
+		<field name="url">/services_final</field>
+		<field name="view_id" ref="services_page_template_final"/>
+	</record>
+
+	<!-- Se agrega el menu de la pagina -->
+	<record id="services_page_link" model="website.menu">
+		<field name="name">Services</field>
+		<field name="page_id" ref="services_page"/>
+		<field name="parent_id" ref="website.main_menu"/>
+		<field name="sequence" type="int">99</field>
+	</record>
+</odoo>
