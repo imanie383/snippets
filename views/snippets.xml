@@ -5,8 +5,9 @@ los snippets van en el archivo snippets.xml
 -->
 <odoo>
 	<template id="snippet_testimonial" name="Testimonial Snippet">
-		<!-- El primer elemento a tener  es esta seccion con la clase = id -->
-		<section class="snippet_testimonial">
+		<!-- El primer elemento a tener  es esta SECCION/div.container/div.row con  -->
+		<!-- La clase de la seccion debe de comensar con snippet_  y la clase = id-->
+		<section class="snippet_testimonial" contenteditable="False">
 			<!-- El siguiente es un div con la clase container -->
 			<div class="container text-center">
 				<div class="row">
@@ -20,6 +21,10 @@ los snippets van en el archivo snippets.xml
 
 					        Para saber el xmlID, te vas a settings/database structure/attachments/
 					        Menu bug/ view Metadata
+
+					        1.-Si pones cualquer liga, se podra editar
+					        2.-si poner cualquier boton con la clase fa se podra cambiar el icono
+					        3.-todas las imagenes se pueden cambiar
 
 						-->
 						<img alt="Algo" class="img-circle" src="/website/image/theme_tutorial.client/250x250"/>
@@ -40,6 +45,7 @@ los snippets van en el archivo snippets.xml
 			</div>
 		</section>
 	</template>
+
 
 	<!-- El template es el pedaso de codigo HTML que se insertara, falta la miniatura -->
 	<!-- Se debe de heredar de website.snippets -->

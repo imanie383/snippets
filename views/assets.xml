@@ -9,7 +9,14 @@
 		//link[last()] =ultimo script de css 
 		-->
 		<xpath expr="//link[last()]" position="after">
-			<link rel="stylesheet" href="/theme_tutorial/static/src/less/style.less"/>
+			<link rel="stylesheet" type="text/less" href="/theme_tutorial/static/src/less/style.less"/>
+		</xpath>
+	</template>
+
+	<template id="assets_editor" inherit_id="website.assets_editor" name="Website Assets Editor">
+		<!-- Agregando un JS -->
+		<xpath expr="//script[last()]" position="after">
+			<script type="text/javascript" src="/theme_tutorial/static/src/js/tutorial_editor.js" />
 		</xpath>
 	</template>
 </odoo>
