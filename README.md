@@ -19,3 +19,5 @@ Paginas
 Estilos
 funcionalidades
 
+https://www.odoo.com/documentation/11.0/howtos/themes.html#snippet-options
+
