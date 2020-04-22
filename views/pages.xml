@@ -17,12 +17,14 @@
 				<t t-call="website.layout">
 					<div class="wrap">
 						<div class="container">
-							<h1>Our Services</h1>
-							<ul>
-								<li>1</li>
-								<li>2</li>
-								<li>3</li>
-							</ul>
+							<div class="services">
+								<h1>Our Services</h1>
+								<ul>
+									<li>1</li>
+									<li>2</li>
+									<li>3</li>
+								</ul>
+							</div>
 						</div>
 						<!-- Para que al momento de editar se puedan agregar snipets -->
 						<div class="oe_structure">
