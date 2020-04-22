@@ -34,3 +34,27 @@ ya esta en el mismo namespace de bootstrap por lo que ya se puede modificar
 @border-radius-base:        0px;
 @border-radius-large:       0px;
 @border-radius-small:       0px;
+
+
+
+
+.snippet_testimonial {
+	border: 1px solid #EAEAEA;
+	padding: 20px;
+
+	/*el & significa this*/
+	&.opt_shadow img {
+		box-shadow: 0 2px 5px rgb(51, 51, 51, 0.4);
+	}
+
+	&.opt_grey_bg {
+		border: none;
+		background-color: #EAEAEA;
+	}
+}
+
+
+
+
+
+

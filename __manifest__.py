@@ -10,6 +10,7 @@
 		'views/assets.xml',
 		'views/image_gallery.xml',
 		'views/snippets.xml',
+		'views/options.xml',
 		'views/layout.xml',
 		'views/pages.xml',
 	],
